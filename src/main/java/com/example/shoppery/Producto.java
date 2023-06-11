@@ -1,7 +1,10 @@
-package com.example.shoperry;
+package com.example.shoppery;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import java.util.List;
 
 
@@ -10,6 +13,7 @@ import java.util.List;
  * 
  */
 @Entity
+@EntityScan(basePackages = "com.example.shoppery")
 @Table(name="productos")
 @NamedQuery(name="Producto.findAll", query="SELECT p FROM Producto p")
 public class Producto implements Serializable {

@@ -1,14 +1,15 @@
-package com.example.shoperry.jwtSecurity;
+package com.example.shoppery.jwtSecurity;
 
 
 import java.security.Key;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.example.shoppery.User;
+
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.impl.crypto.MacProvider;
-import com.example.shoperry.User;
 
 public class AutenticadorJWT {
 	

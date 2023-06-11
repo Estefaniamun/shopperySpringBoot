@@ -1,4 +1,4 @@
-package com.example.shoperry.jwtSecurity;
+package com.example.shoppery.jwtSecurity;
 
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.example.shoperry.repositorio;
+package com.example.shoppery.repositorio;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.shoperry.User;
+import com.example.shoppery.User;
 @Repository
 public interface UserRepositorio extends JpaRepository<User, Serializable> {
 
@@ -19,7 +19,7 @@ public interface UserRepositorio extends JpaRepository<User, Serializable> {
 
 	public abstract User findByNombre(String dni);
 
-	public abstract User findByCorreoAndClave(String correo, String clave);
+	public abstract User findByEmailAndPassword(String email, String password);
 
 	@Transactional
 	public abstract void deleteById(int id);

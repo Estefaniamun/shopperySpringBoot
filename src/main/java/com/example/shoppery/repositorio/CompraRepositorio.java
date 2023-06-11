@@ -1,4 +1,4 @@
-package com.example.shoperry.repositorio;
+package com.example.shoppery.repositorio;
 
 import java.io.Serializable;
 import java.util.List;

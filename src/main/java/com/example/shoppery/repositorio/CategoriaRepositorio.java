@@ -1,4 +1,4 @@
-package com.example.shoperry.repositorio;
+package com.example.shoppery.repositorio;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.shoperry.Categoriaproducto;
-import com.example.shoperry.Producto;
+import com.example.shoppery.Categoriaproducto;
+import com.example.shoppery.Producto;
 
 public interface CategoriaRepositorio extends JpaRepository<Categoriaproducto, Serializable>{
 	@Bean

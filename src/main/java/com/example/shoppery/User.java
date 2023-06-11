@@ -1,4 +1,4 @@
-package com.example.shoperry;
+package com.example.shoppery;
 
 import java.io.Serializable;
 import javax.persistence.*;

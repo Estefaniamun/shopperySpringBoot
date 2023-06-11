@@ -1,4 +1,4 @@
-package com.example.shoperry.repositorio;
+package com.example.shoppery.repositorio;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.shoperry.Descuento;
+import com.example.shoppery.Descuento;
 
 public interface DescuentoRepositorio extends JpaRepository<DescuentoRepositorio, Serializable>{
 

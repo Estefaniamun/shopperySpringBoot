@@ -1,4 +1,4 @@
-package com.example.shoperry.controladores;
+package com.example.shoppery.controladores;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,25 +19,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.shoperry.User;
-import com.example.shoperry.jwtSecurity.AutenticadorJWT;
-import com.example.shoperry.repositorio.UserRepositorio;
+import com.example.shoppery.DTO;
+import com.example.shoppery.User;
+import com.example.shoppery.jwtSecurity.AutenticadorJWT;
+import com.example.shoppery.repositorio.UserRepositorio;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/users")
 public class UserController {
-
-	@Autowired
+	@Autowired(required=true)
 	UserRepositorio usuRep;
-
-	@GetMapping()
+	@GetMapping("/users")
 	public List<DTO> getUsuarios() {
 		List<DTO> listaUsuariosDTO = new ArrayList<DTO>();
 
-		List<User> usuarios = usuRep.findAll();
+		List<User> users = usuRep.findAll();
 
-		for (User u : usuarios) {
+		for (User u : users) {
 			DTO dtoUsuaria = new DTO();
 
 			dtoUsuaria.put("id", u.getId());
@@ -51,7 +50,7 @@ public class UserController {
 
 			listaUsuariosDTO.add(dtoUsuaria);
 		}
-
+		
 		return listaUsuariosDTO;
 	}
 
@@ -125,7 +124,7 @@ public class UserController {
 		DTO dto = new DTO();
 		dto.put("result", "fail");
 
-		User usuAutenticado = usuRep.findByCorreoAndClave(datos.email, datos.password);
+		User usuAutenticado = usuRep.findByEmailAndPassword(datos.email, datos.password);
 
 		// si existe el usuario y los datos son correctos, devolveremos un success y
 		// todos los datos del usuario

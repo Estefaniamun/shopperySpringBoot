@@ -1,4 +1,4 @@
-package com.example.shoperry;
+package com.example.shoppery;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

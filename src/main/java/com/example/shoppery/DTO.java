@@ -1,4 +1,4 @@
-package com.example.shoperry.controladores;
+package com.example.shoppery;
 
 	import java.util.HashMap;
 
