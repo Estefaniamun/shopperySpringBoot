@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.shoppery.DTO;
@@ -26,9 +25,9 @@ import com.example.shoppery.repositorio.UserRepositorio;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/users")
+//@RequestMapping("/users")
 public class UserController {
-	@Autowired(required=true)
+	@Autowired
 	UserRepositorio usuRep;
 	@GetMapping("/users")
 	public List<DTO> getUsuarios() {
